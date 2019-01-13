@@ -69,7 +69,7 @@ Types::Standard::Mouse - bundled set of built-in types for Mouse
 
 =head1 DESCRIPTION
 
-Types::Standard::Mouse is ...
+Mouse::Util::TypeConstraints bundles a few types which seem to be useful. (like Types::Standard) 
 
 =head1 LICENSE
 

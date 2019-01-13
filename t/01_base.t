@@ -39,4 +39,16 @@ subtest maybe_constraint => sub {
   ok $constraint->check(Hoge->new);
 };
 
+subtest enum => sub {
+  my $constraint = enum [qw( A B C )];
+  ok $constraint->check($_) for qw( A B C );
+  ok !$constraint->check(1000);
+};
+
+subtest primitive => sub {
+  ok Str->check('str');
+  ok Int->check(10);
+  ok Num->check(1.2);
+};
+
 done_testing;
